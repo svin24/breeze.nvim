@@ -47,6 +47,7 @@ I like my themes very colorschemes very "colorless" so if you are interested in 
 * copy the repo and load it from your system(locally)
 
 <details>
+  
 ```lua
 return {
   dir = vim.fn.expand '$HOME' .. '/path/to/breeze.nvim',
