@@ -1,10 +1,6 @@
-# gruber-darker.nvim
+# breeze.nvim
 
-Gruber darker theme for Neovim written entirely in lua.
-
-Based on [Alexey's version of the gruber darker theme](https://github.com/rexim/gruber-darker-theme).
-
-![Screenshot. with transparent true](https://github.com/thimc/gruber-darker.nvim/blob/main/screenshot.png)
+Breeze.nvim theme(experimental)
 
 ## Installation
 
@@ -15,7 +11,7 @@ Based on [Alexey's version of the gruber darker theme](https://github.com/rexim/
 return require('packer').startup(function(use)
   use {'wbthomason/packer.nvim'}
 
-  use {'thimc/gruber-darker.nvim'}
+  use {'svin24/breeze.nvim'}
 end)
 ```
 </details>
@@ -25,26 +21,48 @@ end)
 
 ```lua
 {
-  'thimc/gruber-darker.nvim',
+  'svin24/breeze.nvim',
   config = function()
-    require('gruber-darker').setup({
+    require('breeze').setup({
       -- OPTIONAL
-      transparent = true, -- removes the background
+      --transparent = true, -- removes the background
       -- underline = false, -- disables underline fonts
       -- bold = false, -- disables bold fonts
     })
-    vim.cmd.colorscheme('gruber-darker')
+    vim.cmd.colorscheme('breeze')
   end,
 }
 ```
 </details>
 
-## Supported plugins
+## Future goals
 
-I don't use all that many plugins, instead I rely on the built in commands
-such as netrw, vimdiff and spellcheck. So I haven't really extended the themes
-support but I can confirm that popular plugins such as treesitter, telescope
-and fugitive work fine.
+[] - Plugin compatibility
+[] - Light mode(maybe)
 
+## I want to edit this theme for my own usecase
 
-Pull requests are more than welcome!
+I like my themes very colorschemes very "colorless" so if you are interested in editing it for your own usecase you can:
+* fork the repo
+* copy the repo and load it from your system(locally)
+
+<details>
+```lua
+return {
+  dir = vim.fn.expand '$HOME' .. '/path/to/breeze.nvim',
+  config = function()
+    require('breeze').setup {
+      -- OPTIONAL
+      -- transparent = false,
+      -- underline = false,
+      -- bold = false,
+    }
+    vim.cmd.colorscheme 'breeze'
+  end,
+}
+```
+</details>
+
+## Credits
+
+https://github.com/blazkowolf/gruber-darker.nvim
