@@ -37,8 +37,8 @@ end)
 
 ## Future goals
 
-[] - Plugin compatibility
-[] - Light mode(maybe)
+- [ ] Plugin compatibility
+- [ ] Light mode(maybe)
 
 ## I want to edit this theme for my own usecase
 
